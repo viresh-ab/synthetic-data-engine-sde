@@ -1,0 +1,353 @@
+{
+  "product_review": {
+    "templates": [
+      "This {adjective} product {verb} my expectations. {detail} {recommendation}",
+      "I {feeling} this purchase. The quality is {quality}. {detail}",
+      "{adjective} experience overall. {detail} Would {recommendation_action}.",
+      "The {product_aspect} is {quality}. {detail} {recommendation}",
+      "{sentiment_start} {detail} Perfect for {use_case}.",
+      "After {time_period}, {quality_statement}. {detail}"
+    ],
+    "variables": {
+      "adjective": ["great", "excellent", "good", "amazing", "wonderful", "fantastic", "outstanding", "poor", "disappointing", "terrible", "mediocre", "decent", "acceptable"],
+      "verb": ["exceeded", "met", "matched", "disappointed", "surpassed"],
+      "feeling": ["love", "like", "appreciate", "regret", "enjoy", "recommend"],
+      "quality": ["excellent", "good", "acceptable", "poor", "outstanding", "subpar", "mediocre"],
+      "detail": [
+        "The materials feel premium.",
+        "Fast shipping and great packaging.",
+        "Exactly as described in the listing.",
+        "Not quite what I expected.",
+        "Better than similar products I've tried.",
+        "The design is very appealing.",
+        "Assembly was straightforward.",
+        "Customer service was helpful.",
+        "Good value for the price.",
+        "Worth every penny."
+      ],
+      "recommendation": [
+        "Highly recommend!",
+        "Would buy again.",
+        "Telling all my friends about this.",
+        "Skip this one.",
+        "Look for alternatives.",
+        "Consider other options.",
+        "Great addition to my collection."
+      ],
+      "recommendation_action": ["recommend it", "buy again", "pass on this", "look elsewhere"],
+      "product_aspect": ["quality", "design", "functionality", "durability", "value"],
+      "sentiment_start": ["Love it!", "Not impressed.", "Pretty good.", "Absolutely amazing!", "Disappointed."],
+      "use_case": ["daily use", "gifts", "home use", "professional work", "travel"],
+      "time_period": ["using it for a month", "a few weeks", "testing it thoroughly", "daily use"],
+      "quality_statement": ["still working perfectly", "showing some wear", "exceeded expectations", "holding up well"]
+    }
+  },
+  
+  "customer_feedback": {
+    "templates": [
+      "The service was {quality}. {detail} {recommendation}",
+      "{feeling} about the {aspect}. {detail}",
+      "My experience was {adjective}. {detail} {future_intent}",
+      "{rating_statement} {detail} {recommendation}",
+      "Staff was {staff_quality}. {detail} Overall {sentiment}."
+    ],
+    "variables": {
+      "quality": ["excellent", "good", "satisfactory", "poor", "outstanding", "unacceptable"],
+      "detail": [
+        "The team was very professional.",
+        "Wait time was reasonable.",
+        "Could use some improvement.",
+        "Exceeded my expectations.",
+        "Everything was handled efficiently.",
+        "Communication could be better.",
+        "Very responsive to my needs."
+      ],
+      "aspect": ["service", "product", "delivery", "support", "overall experience"],
+      "adjective": ["positive", "negative", "mixed", "wonderful", "frustrating"],
+      "feeling": ["Happy", "Satisfied", "Disappointed", "Pleased", "Frustrated", "Delighted"],
+      "recommendation": [
+        "Will definitely return.",
+        "Recommend to others.",
+        "Won't be back.",
+        "Sharing with friends.",
+        "5 stars all around!"
+      ],
+      "future_intent": [
+        "Will use again.",
+        "Looking forward to next time.",
+        "Not planning to return.",
+        "Already recommended to friends."
+      ],
+      "rating_statement": [
+        "5 out of 5 stars.",
+        "4 stars - very good.",
+        "3 stars - average.",
+        "2 stars - needs work.",
+        "1 star - very poor."
+      ],
+      "staff_quality": ["friendly", "helpful", "professional", "courteous", "knowledgeable", "inattentive"],
+      "sentiment": ["very satisfied", "pleased", "neutral", "disappointed", "happy with service"]
+    }
+  },
+
+  "survey_response": {
+    "templates": [
+      "I {action} because {reason}. {additional_thought}",
+      "{frequency} I {activity}. {explanation}",
+      "My preference is {preference} since {justification}.",
+      "{agreement_level} {statement}. {reasoning}",
+      "I would rate this {rating} because {reason}."
+    ],
+    "variables": {
+      "action": ["agree", "disagree", "believe", "think", "feel", "prefer"],
+      "reason": [
+        "it makes sense",
+        "of personal experience",
+        "I've seen positive results",
+        "it aligns with my values",
+        "it's convenient",
+        "of the quality"
+      ],
+      "additional_thought": [
+        "Others should consider this too.",
+        "This has worked well for me.",
+        "I might change my mind later.",
+        "It depends on the situation.",
+        "More research is needed."
+      ],
+      "frequency": ["Often", "Sometimes", "Rarely", "Always", "Never", "Occasionally"],
+      "activity": [
+        "use this product",
+        "recommend this service",
+        "shop at this store",
+        "think about this"
+      ],
+      "explanation": [
+        "It fits my lifestyle.",
+        "The quality is consistent.",
+        "It's become a habit.",
+        "I trust this brand."
+      ],
+      "preference": ["quality over price", "convenience", "brand loyalty", "value"],
+      "justification": [
+        "it matters most to me",
+        "I've learned from experience",
+        "it's worth the investment"
+      ],
+      "agreement_level": [
+        "Strongly agree that",
+        "Somewhat agree that",
+        "Neutral about whether",
+        "Somewhat disagree that",
+        "Strongly disagree that"
+      ],
+      "statement": [
+        "this meets my needs",
+        "the quality is good",
+        "I would recommend it",
+        "it's worth the price"
+      ],
+      "reasoning": [
+        "Based on my experience.",
+        "Compared to alternatives.",
+        "Considering all factors.",
+        "In my specific case."
+      ],
+      "rating": [
+        "highly",
+        "positively",
+        "moderately",
+        "poorly",
+        "as average"
+      ]
+    }
+  },
+
+  "comment": {
+    "templates": [
+      "{adjective} content! {detail}",
+      "This is {feeling}. {reason}",
+      "{reaction} {elaboration}",
+      "{agreement} {explanation}",
+      "{question} {thought}"
+    ],
+    "variables": {
+      "adjective": ["Great", "Interesting", "Useful", "Amazing", "Helpful", "Insightful", "Questionable"],
+      "detail": [
+        "Thanks for sharing!",
+        "Very informative.",
+        "I learned something new.",
+        "Well explained.",
+        "Clearly presented."
+      ],
+      "feeling": ["helpful", "interesting", "confusing", "clear", "inspiring"],
+      "reason": [
+        "Exactly what I needed to know.",
+        "I had the same question.",
+        "This clarifies things.",
+        "Good perspective."
+      ],
+      "reaction": [
+        "Love this!",
+        "Totally agree.",
+        "Not sure about this.",
+        "Makes sense.",
+        "Interesting point."
+      ],
+      "elaboration": [
+        "I've experienced this too.",
+        "Worth considering.",
+        "Good to know.",
+        "Thanks for the insight."
+      ],
+      "agreement": ["I agree.", "Good point.", "Exactly!", "I see it differently."],
+      "explanation": [
+        "This matches my experience.",
+        "I've noticed this as well.",
+        "From my perspective...",
+        "In my case..."
+      ],
+      "question": ["How does this work?", "What about...?", "Can you elaborate?", "Interesting!"],
+      "thought": [
+        "I'd like to know more.",
+        "This is worth exploring.",
+        "Good question.",
+        "Makes me think."
+      ]
+    }
+  },
+
+  "description": {
+    "templates": [
+      "A {adjective} {noun} that {verb} {adverb}.",
+      "This {noun} is {adjective} and {adjective2}.",
+      "{adjective} {noun} with {feature}.",
+      "Perfect for {use_case}. {benefit}",
+      "{size} {noun} made from {material}. {characteristic}"
+    ],
+    "variables": {
+      "adjective": ["versatile", "modern", "classic", "innovative", "premium", "stylish", "practical", "elegant", "durable", "lightweight"],
+      "adjective2": ["reliable", "efficient", "beautiful", "functional", "comfortable", "sophisticated"],
+      "noun": ["product", "item", "solution", "tool", "accessory", "device", "piece"],
+      "verb": ["performs", "functions", "works", "operates", "delivers"],
+      "adverb": ["perfectly", "efficiently", "smoothly", "reliably", "exceptionally"],
+      "feature": [
+        "advanced technology",
+        "premium materials",
+        "ergonomic design",
+        "multiple functions",
+        "sleek styling",
+        "superior quality"
+      ],
+      "use_case": [
+        "everyday use",
+        "professional applications",
+        "home and office",
+        "on-the-go convenience",
+        "serious enthusiasts"
+      ],
+      "benefit": [
+        "Built to last.",
+        "Easy to use.",
+        "Great value.",
+        "Trusted quality.",
+        "Award-winning design."
+      ],
+      "size": ["Compact", "Full-size", "Mid-size", "Portable", "Standard"],
+      "material": [
+        "high-grade materials",
+        "premium components",
+        "sustainable materials",
+        "quality construction"
+      ],
+      "characteristic": [
+        "Designed for performance.",
+        "Crafted with care.",
+        "Built for reliability.",
+        "Made to impress."
+      ]
+    }
+  },
+
+  "email_subject": {
+    "templates": [
+      "{action} {topic} - {urgency}",
+      "{greeting} {topic}",
+      "Re: {topic} - {status}",
+      "{topic}: {detail}",
+      "{urgency}: {action} needed for {topic}"
+    ],
+    "variables": {
+      "action": ["Update on", "Reminder about", "Information regarding", "Follow-up on", "Quick question about"],
+      "topic": ["your order", "your account", "your request", "our meeting", "the project", "your inquiry"],
+      "urgency": ["Please respond", "Time sensitive", "Action required", "FYI", "For your review"],
+      "greeting": ["Hello!", "Quick note about", "Important update on"],
+      "status": ["Completed", "In progress", "Needs attention", "Updated"],
+      "detail": ["next steps", "important information", "required action", "status update"]
+    }
+  },
+
+  "social_media_post": {
+    "templates": [
+      "{hook} {content} {cta}",
+      "{emoji} {statement} {hashtags}",
+      "{question} {content} {cta}",
+      "{announcement} {details} {emoji}"
+    ],
+    "variables": {
+      "hook": [
+        "Just discovered:",
+        "Pro tip:",
+        "Did you know?",
+        "Excited to share:",
+        "Quick reminder:"
+      ],
+      "content": [
+        "This has been a game changer.",
+        "You need to try this.",
+        "Perfect for anyone who...",
+        "Great for improving...",
+        "Here's what worked for me."
+      ],
+      "cta": [
+        "Check it out!",
+        "Let me know what you think!",
+        "Link in bio.",
+        "DM me for details.",
+        "Tag a friend!"
+      ],
+      "emoji": ["🔥", "✨", "💯", "🎉", "👏", "💪", "🌟", "❤️"],
+      "statement": [
+        "Best decision ever!",
+        "Highly recommend this.",
+        "So worth it.",
+        "You won't regret it."
+      ],
+      "hashtags": [
+        "#winning",
+        "#goals",
+        "#recommended",
+        "#musthave",
+        "#lifehack"
+      ],
+      "question": [
+        "Looking for advice?",
+        "Want to know more?",
+        "Anyone else tried this?",
+        "What do you think?"
+      ],
+      "announcement": [
+        "Excited to announce:",
+        "Big news:",
+        "Update:",
+        "New:"
+      ],
+      "details": [
+        "More details coming soon.",
+        "Stay tuned!",
+        "Check out the link.",
+        "Available now!"
+      ]
+    }
+  }
+}

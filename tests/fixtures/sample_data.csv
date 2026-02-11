@@ -1,0 +1,51 @@
+customer_id,age,gender,income,purchase_amount,product_category,signup_date,email,phone,city,state,zipcode,satisfaction_rating
+1,34,M,52000.00,125.50,Electronics,2023-01-15,john.smith@email.com,555-123-4567,New York,NY,10001,4.5
+2,28,F,48000.00,89.99,Clothing,2023-02-20,jane.doe@example.com,555-234-5678,Los Angeles,CA,90001,4.0
+3,45,M,75000.00,250.00,Home & Garden,2023-01-30,bob.johnson@mail.com,555-345-6789,Chicago,IL,60601,5.0
+4,31,F,55000.00,45.25,Books,2023-03-10,alice.williams@test.org,555-456-7890,Houston,TX,77001,3.5
+5,52,M,82000.00,310.75,Electronics,2023-02-05,charlie.brown@company.com,555-567-8901,Phoenix,AZ,85001,4.5
+6,29,F,51000.00,67.50,Clothing,2023-04-12,diana.miller@email.com,555-678-9012,Philadelphia,PA,19101,4.0
+7,38,M,62000.00,189.99,Sports,2023-03-25,edward.davis@example.com,555-789-0123,San Antonio,TX,78201,4.5
+8,41,F,71000.00,99.00,Beauty,2023-01-18,fiona.garcia@mail.com,555-890-1234,San Diego,CA,92101,3.0
+9,26,M,44000.00,156.25,Electronics,2023-05-08,george.rodriguez@test.org,555-901-2345,Dallas,TX,75201,5.0
+10,50,F,78000.00,220.00,Home & Garden,2023-02-28,hannah.martinez@company.com,555-012-3456,San Jose,CA,95101,4.5
+11,33,M,58000.00,78.50,Books,2023-04-20,ian.hernandez@email.com,555-123-5678,Austin,TX,73301,4.0
+12,47,F,69000.00,145.99,Clothing,2023-01-22,julia.lopez@example.com,555-234-6789,Jacksonville,FL,32099,3.5
+13,35,M,64000.00,201.25,Electronics,2023-03-15,kevin.gonzalez@mail.com,555-345-7890,Fort Worth,TX,76101,5.0
+14,30,F,53000.00,92.00,Beauty,2023-05-02,laura.wilson@test.org,555-456-8901,Columbus,OH,43085,4.0
+15,42,M,73000.00,267.50,Sports,2023-02-14,michael.anderson@company.com,555-567-9012,Charlotte,NC,28201,4.5
+16,27,F,49000.00,55.75,Books,2023-04-05,nancy.thomas@email.com,555-678-0123,San Francisco,CA,94102,3.5
+17,39,M,66000.00,178.99,Home & Garden,2023-01-28,oliver.taylor@example.com,555-789-1234,Indianapolis,IN,46201,4.0
+18,44,F,72000.00,134.00,Clothing,2023-03-18,patricia.moore@mail.com,555-890-2345,Seattle,WA,98101,5.0
+19,32,M,59000.00,98.25,Electronics,2023-05-12,quinn.jackson@test.org,555-901-3456,Denver,CO,80201,4.5
+20,48,F,76000.00,245.50,Beauty,2023-02-22,rachel.martin@company.com,555-012-4567,Boston,MA,02101,4.0
+21,36,M,61000.00,112.99,Sports,2023-04-16,samuel.lee@email.com,555-123-6789,Nashville,TN,37201,3.5
+22,25,F,46000.00,67.00,Books,2023-01-25,tara.perez@example.com,555-234-7890,Detroit,MI,48201,4.5
+23,51,M,80000.00,289.25,Electronics,2023-03-08,ursula.thompson@mail.com,555-345-8901,Portland,OR,97201,5.0
+24,37,F,63000.00,145.50,Home & Garden,2023-05-20,victoria.white@test.org,555-456-9012,Las Vegas,NV,89101,4.0
+25,43,M,70000.00,199.99,Clothing,2023-02-12,william.harris@company.com,555-567-0123,Memphis,TN,38101,4.5
+26,28,F,50000.00,84.75,Beauty,2023-04-25,xena.sanchez@email.com,555-678-1234,Louisville,KY,40201,3.5
+27,40,M,68000.00,156.00,Sports,2023-01-20,yuri.clark@example.com,555-789-2345,Baltimore,MD,21201,4.0
+28,46,F,74000.00,223.50,Electronics,2023-03-22,zara.ramirez@mail.com,555-890-3456,Milwaukee,WI,53201,5.0
+29,31,M,56000.00,78.25,Books,2023-05-15,adam.lewis@test.org,555-901-4567,Albuquerque,NM,87101,4.5
+30,49,F,77000.00,267.99,Home & Garden,2023-02-18,beth.robinson@company.com,555-012-5678,Tucson,AZ,85701,4.0
+31,34,M,60000.00,134.50,Clothing,2023-04-28,carlos.walker@email.com,555-123-7890,Fresno,CA,93650,3.5
+32,53,F,83000.00,298.00,Electronics,2023-01-12,donna.young@example.com,555-234-8901,Sacramento,CA,94203,5.0
+33,29,M,52000.00,92.75,Beauty,2023-03-30,eric.allen@mail.com,555-345-9012,Long Beach,CA,90801,4.0
+34,45,F,73000.00,189.25,Sports,2023-05-18,frances.king@test.org,555-456-0123,Kansas City,MO,64101,4.5
+35,38,M,65000.00,112.50,Books,2023-02-08,gary.wright@company.com,555-567-1234,Mesa,AZ,85201,3.5
+36,41,F,71000.00,245.99,Home & Garden,2023-04-22,helen.lopez@email.com,555-678-2345,Atlanta,GA,30301,4.0
+37,26,M,48000.00,67.75,Clothing,2023-01-26,ivan.hill@example.com,555-789-3456,Virginia Beach,VA,23450,5.0
+38,50,F,79000.00,223.00,Electronics,2023-03-12,jessica.scott@mail.com,555-890-4567,Omaha,NE,68101,4.5
+39,33,M,58000.00,98.50,Beauty,2023-05-22,kyle.green@test.org,555-901-5678,Colorado Springs,CO,80901,4.0
+40,47,F,75000.00,267.25,Sports,2023-02-16,lisa.adams@company.com,555-012-6789,Raleigh,NC,27601,3.5
+41,35,M,62000.00,145.75,Books,2023-04-30,mark.baker@email.com,555-123-8901,Miami,FL,33101,4.5
+42,42,F,72000.00,198.99,Home & Garden,2023-01-14,nina.gonzalez@example.com,555-234-9012,Oakland,CA,94601,5.0
+43,30,M,54000.00,84.00,Clothing,2023-03-28,oscar.nelson@mail.com,555-345-0123,Minneapolis,MN,55401,4.0
+44,48,F,76000.00,289.50,Electronics,2023-05-10,paula.carter@test.org,555-456-1234,Tulsa,OK,74101,4.5
+45,36,M,63000.00,134.25,Beauty,2023-02-24,quincy.mitchell@company.com,555-567-2345,Wichita,KS,67201,3.5
+46,44,F,73000.00,212.75,Sports,2023-04-18,rosa.perez@email.com,555-678-3456,Arlington,TX,76001,4.0
+47,27,M,49000.00,78.99,Books,2023-01-30,steve.roberts@example.com,555-789-4567,New Orleans,LA,70112,5.0
+48,51,F,80000.00,256.50,Home & Garden,2023-03-16,tina.turner@mail.com,555-890-5678,Bakersfield,CA,93301,4.5
+49,32,M,57000.00,92.00,Clothing,2023-05-24,umar.phillips@test.org,555-901-6789,Tampa,FL,33601,4.0
+50,49,F,78000.00,234.25,Electronics,2023-02-20,vera.campbell@company.com,555-012-7890,Honolulu,HI,96801,3.5

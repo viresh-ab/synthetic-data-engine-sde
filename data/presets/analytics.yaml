@@ -1,0 +1,87 @@
+# Analytics Configuration Preset
+# Optimized for analytics datasets with focus on statistical accuracy
+
+generation:
+  num_rows: 10000  # Larger datasets for better statistical properties
+  seed: 42  # Fixed seed for reproducibility
+  batch_size: 500  # Larger batches for efficiency
+  enable_parallel: true
+  max_workers: 8  # More workers for large datasets
+
+numeric:
+  method: correlation  # Prioritize correlation preservation
+  preserve_correlations: true  # Critical for analytics
+  distribution_fitting: auto  # Let system choose best fit
+  outlier_handling: preserve  # Keep outliers for realistic analytics
+  decimal_places: null  # Preserve original precision
+  range_enforcement: true  # Maintain data bounds
+
+text:
+  llm_provider: anthropic
+  model: claude-sonnet-4-20250514
+  max_tokens: 200  # Shorter text for analytics datasets
+  temperature: 0.5  # Lower temperature for consistency
+  use_templates: true  # Templates sufficient for labels/categories
+  preserve_length: false  # Length less important for analytics
+  length_variance: 0.3
+
+pii:
+  locale: en_US
+  gender_distribution:
+    male: 0.48
+    female: 0.48
+    other: 0.04
+  anonymization_level: partial  # Some realistic variation
+  consistency_check: true
+  realistic_patterns: true
+
+temporal:
+  preserve_patterns: true  # Important for time series analytics
+  business_days_only: false  # Include all days
+  timezone: UTC
+  date_format: null
+
+validation:
+  enable_quality_checks: true  # Critical for analytics
+  enable_privacy_checks: true
+  quality_threshold: 0.9  # High quality threshold
+  privacy_threshold: 0.7
+  k_anonymity: 3  # Lower k for more utility
+  fail_on_validation: false
+
+knowledge:
+  enable_rag: false
+  knowledge_base_path: null
+  domain: null
+  enforce_constraints: true
+
+# Analytics-specific settings
+column_configs:
+  # Example: Ensure key metrics are preserved
+  # revenue:
+  #   preserve_distribution: true
+  #   correlation_priority: high
+  # conversion_rate:
+  #   type: numeric
+  #   min: 0.0
+  #   max: 1.0
+  #   decimal_places: 4
+
+# Additional analytics-focused settings
+analytics_settings:
+  preserve_statistical_properties:
+    - mean
+    - variance
+    - skewness
+    - kurtosis
+  
+  correlation_threshold: 0.9  # High correlation preservation
+  
+  segment_preservation: true  # Preserve customer segments
+  
+  time_series_patterns:
+    - trend
+    - seasonality
+    - autocorrelation
+  
+  feature_importance: true  # Maintain feature relationships

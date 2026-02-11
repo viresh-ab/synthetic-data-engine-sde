@@ -1,0 +1,75 @@
+# Streamlit Configuration for Synthetic Data Generator
+
+[theme]
+# Primary color - used for interactive elements
+primaryColor = "#1f77b4"
+
+# Background color
+backgroundColor = "#ffffff"
+
+# Secondary background color
+secondaryBackgroundColor = "#f0f2f6"
+
+# Text color
+textColor = "#262730"
+
+# Font family
+font = "sans serif"
+
+[server]
+# Port number for the server
+port = 8501
+
+# Enable CORS
+enableCORS = false
+
+# Enable XSRF protection
+enableXsrfProtection = true
+
+# Max upload size (200 MB)
+maxUploadSize = 200
+
+# Enable websocket compression
+enableWebsocketCompression = true
+
+[browser]
+# Gather usage stats (set to false for privacy)
+gatherUsageStats = false
+
+# Server address (use for deployment)
+# serverAddress = "localhost"
+
+# Server port
+serverPort = 8501
+
+[runner]
+# Run on save
+magicEnabled = true
+
+# Fast reruns
+fastReruns = true
+
+# Post script GC
+postScriptGC = true
+
+[client]
+# Show error details
+showErrorDetails = true
+
+# Toolbar mode (developer, viewer, minimal, auto)
+toolbarMode = "auto"
+
+[deprecation]
+# Show deprecation warnings
+showPyplotGlobalUse = false
+
+[logger]
+# Logging level (error, warning, info, debug)
+level = "info"
+
+# Message format
+messageFormat = "%(asctime)s %(message)s"
+
+[mapbox]
+# Mapbox token (optional, for map visualizations)
+# token = "your-mapbox-token-here"
