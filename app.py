@@ -767,9 +767,9 @@ def main():
     pages = {
         "🏠 Home": page_home,
         "📤 Upload": page_upload,
-        # "⚙️ Configure": page_configure,
+        "⚙️ Configure": page_configure,
         "🎲 Generate": page_generate,
-        # "✅ Validate": page_validate,
+        "✅ Validate": page_validate,
         "💾 Export": page_export,
     }
 
