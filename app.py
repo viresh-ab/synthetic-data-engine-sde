@@ -732,7 +732,7 @@ def main():
         "📤 Upload": page_upload,
         "⚙️ Configure": page_configure,
         "🎲 Generate": page_generate,
-        "✅ Validate": page_validate,
+        # "✅ Validate": page_validate,
         "💾 Export": page_export,
     }
 
@@ -740,29 +740,6 @@ def main():
 
     # Display selected page
     pages[selection]()
-
-    # Sidebar info
-    # st.sidebar.markdown("---")
-    # st.sidebar.markdown("### About")
-    # st.sidebar.info("""
-    # **Synthetic Data Generator**
-    
-    # Generate high-quality synthetic data with:
-    # - Statistical preservation
-    # - Privacy guarantees
-    # - Multiple data types
-    # - Validation metrics
-    # """)
-
-    # Session state info
-    # if st.sidebar.checkbox("Show Session State"):
-    #     st.sidebar.json({
-    #         'reference_data': st.session_state.reference_data is not None,
-    #         'synthetic_data': st.session_state.synthetic_data is not None,
-    #         'quality_report': st.session_state.quality_report is not None,
-    #         'privacy_report': st.session_state.privacy_report is not None,
-    #     })
-
 
 if __name__ == "__main__":
     main()
