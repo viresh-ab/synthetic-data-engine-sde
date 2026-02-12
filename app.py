@@ -123,7 +123,7 @@ def page_home():
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.markdown("### 📊 Smart Generation")
+        st.markdown("#### 📊 Smart Generation")
         st.markdown("""
         - Numeric with correlations
         - LLM-powered text
@@ -133,7 +133,7 @@ def page_home():
         """)
 
     with col2:
-        st.markdown("### ✅ Quality Validation")
+        st.markdown("#### ✅ Quality Validation")
         st.markdown("""
         - Distribution matching
         - Statistical similarity
@@ -143,7 +143,7 @@ def page_home():
         """)
 
     with col3:
-        st.markdown("### 🔒 Privacy Checks")
+        st.markdown("#### 🔒 Privacy Checks")
         st.markdown("""
         - K-anonymity
         - Re-identification risk
