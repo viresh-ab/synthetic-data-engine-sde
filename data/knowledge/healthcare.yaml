@@ -1,0 +1,363 @@
+# Healthcare Domain Knowledge Base
+
+constraints:
+  age:
+    - type: range
+      parameters:
+        min: 0
+        max: 120
+      description: "Valid age range for patients"
+
+  blood_pressure_systolic:
+    - type: range
+      parameters:
+        min: 60
+        max: 250
+      description: "Systolic blood pressure range (mmHg)"
+
+  blood_pressure_diastolic:
+    - type: range
+      parameters:
+        min: 40
+        max: 150
+      description: "Diastolic blood pressure range (mmHg)"
+
+  heart_rate:
+    - type: range
+      parameters:
+        min: 40
+        max: 200
+      description: "Heart rate range (bpm)"
+
+  body_temperature:
+    - type: range
+      parameters:
+        min: 95.0
+        max: 106.0
+      description: "Body temperature in Fahrenheit"
+    
+    - type: precision
+      parameters:
+        decimal_places: 1
+      description: "Temperature precision to 1 decimal"
+
+  weight:
+    - type: range
+      parameters:
+        min: 2.0
+        max: 500.0
+      description: "Weight in pounds"
+
+  height:
+    - type: range
+      parameters:
+        min: 10
+        max: 96
+      description: "Height in inches"
+
+  bmi:
+    - type: range
+      parameters:
+        min: 10.0
+        max: 70.0
+      description: "Body Mass Index range"
+    
+    - type: formula
+      parameters:
+        formula: "(weight_lbs / (height_inches^2)) * 703"
+      description: "BMI calculation from weight and height"
+
+  glucose_level:
+    - type: range
+      parameters:
+        min: 40
+        max: 600
+      description: "Blood glucose level (mg/dL)"
+
+  insurance_copay:
+    - type: range
+      parameters:
+        min: 0.0
+        max: 500.0
+      description: "Insurance copay amount"
+
+relationships:
+  diagnosis:
+    - treatment
+    - medication
+    - procedure
+  
+  age:
+    - diagnosis
+    - medication_dosage
+    - vital_signs
+  
+  insurance_type:
+    - copay
+    - coverage
+  
+  department:
+    - diagnosis
+    - procedure
+    - physician_specialty
+
+terminology:
+  blood_type:
+    - A+
+    - A-
+    - B+
+    - B-
+    - AB+
+    - AB-
+    - O+
+    - O-
+  
+  gender:
+    - Male
+    - Female
+    - Other
+    - Prefer not to say
+  
+  marital_status:
+    - Single
+    - Married
+    - Divorced
+    - Widowed
+    - Separated
+  
+  insurance_type:
+    - Private
+    - Medicare
+    - Medicaid
+    - Military
+    - Self-Pay
+    - Workers Comp
+  
+  visit_type:
+    - Routine Check-up
+    - Follow-up
+    - Emergency
+    - Urgent Care
+    - Preventive
+    - Consultation
+    - Diagnostic
+  
+  department:
+    - Cardiology
+    - Neurology
+    - Orthopedics
+    - Pediatrics
+    - Oncology
+    - Radiology
+    - Emergency
+    - Surgery
+    - Internal Medicine
+    - Family Medicine
+    - Psychiatry
+    - Dermatology
+    - Obstetrics/Gynecology
+  
+  diagnosis_category:
+    - Cardiovascular
+    - Respiratory
+    - Endocrine
+    - Gastrointestinal
+    - Musculoskeletal
+    - Neurological
+    - Infectious Disease
+    - Mental Health
+    - Dermatological
+    - Oncological
+  
+  common_diagnoses:
+    - Hypertension
+    - Type 2 Diabetes
+    - Asthma
+    - Depression
+    - Anxiety
+    - Arthritis
+    - Back Pain
+    - Migraine
+    - Allergies
+    - GERD
+    - Hyperlipidemia
+    - Obesity
+  
+  medication_category:
+    - Analgesics
+    - Antibiotics
+    - Antihypertensives
+    - Antidiabetics
+    - Antidepressants
+    - Antihistamines
+    - Statins
+    - Beta Blockers
+    - ACE Inhibitors
+  
+  procedure_type:
+    - Examination
+    - X-Ray
+    - MRI
+    - CT Scan
+    - Blood Test
+    - Ultrasound
+    - ECG
+    - Vaccination
+    - Minor Surgery
+    - Biopsy
+  
+  appointment_status:
+    - Scheduled
+    - Confirmed
+    - Completed
+    - Cancelled
+    - No-Show
+    - Rescheduled
+  
+  vital_signs_status:
+    - Normal
+    - Elevated
+    - Low
+    - Critical
+  
+  smoking_status:
+    - Never
+    - Former
+    - Current
+    - Unknown
+  
+  alcohol_use:
+    - None
+    - Occasional
+    - Moderate
+    - Heavy
+
+business_rules:
+  - rule_id: bmi_calculation
+    description: "BMI must be calculated from weight and height"
+    applies_to: [bmi, weight, height]
+    condition: "bmi = (weight / (height^2)) * 703"
+  
+  - rule_id: pediatric_age_department
+    description: "Patients under 18 should see Pediatrics"
+    applies_to: [age, department]
+    condition: "age < 18 SUGGESTS department = 'Pediatrics'"
+  
+  - rule_id: emergency_triage
+    description: "Emergency visits should have vital signs recorded"
+    applies_to: [visit_type, vital_signs]
+    condition: "visit_type = 'Emergency' REQUIRES (blood_pressure AND heart_rate AND temperature)"
+  
+  - rule_id: insurance_copay_correlation
+    description: "Copay varies by insurance type"
+    applies_to: [insurance_type, copay]
+    condition: "insurance_type = 'Medicare' IMPLIES copay <= 50"
+  
+  - rule_id: age_medication_dosage
+    description: "Medication dosage adjusted for age groups"
+    applies_to: [age, medication_dosage]
+    condition: "age < 18 OR age > 65 REQUIRES dosage_adjustment"
+  
+  - rule_id: critical_vitals_alert
+    description: "Critical vital signs require immediate attention"
+    applies_to: [blood_pressure, heart_rate, temperature]
+    condition: "systolic > 180 OR diastolic > 120 OR heart_rate > 120 OR temperature > 103 TRIGGERS alert"
+
+value_distributions:
+  age_distribution:
+    ranges:
+      - range: [0, 17]
+        label: Pediatric
+        percentage: 0.15
+      - range: [18, 39]
+        label: Young Adult
+        percentage: 0.30
+      - range: [40, 64]
+        label: Middle Age
+        percentage: 0.35
+      - range: [65, 120]
+        label: Senior
+        percentage: 0.20
+  
+  bmi_categories:
+    Underweight: 0.05     # BMI < 18.5
+    Normal: 0.35          # BMI 18.5-24.9
+    Overweight: 0.35      # BMI 25-29.9
+    Obese: 0.25           # BMI >= 30
+  
+  blood_type_distribution:
+    O+: 0.374
+    A+: 0.357
+    B+: 0.085
+    O-: 0.066
+    A-: 0.063
+    AB+: 0.034
+    B-: 0.015
+    AB-: 0.006
+  
+  insurance_distribution:
+    Private: 0.50
+    Medicare: 0.20
+    Medicaid: 0.15
+    Self-Pay: 0.10
+    Military: 0.03
+    Workers Comp: 0.02
+
+privacy_requirements:
+  - HIPAA Compliance
+  - De-identification Standards (Safe Harbor Method)
+  - Minimum Necessary Rule
+  - PHI Protection
+  - Patient Consent Requirements
+
+phi_elements:
+  direct_identifiers:
+    - Patient Name
+    - Social Security Number
+    - Medical Record Number
+    - Account Number
+    - Email Address
+    - Phone Number
+    - Address
+    - Date of Birth
+    - Admission Date
+    - Discharge Date
+  
+  quasi_identifiers:
+    - Age (if over 89)
+    - Zip Code (first 3 digits only)
+    - Dates (year only)
+    - Geographic subdivisions smaller than state
+
+anonymization_rules:
+  - rule_id: age_generalization
+    description: "Ages over 89 must be aggregated to 90+"
+    applies_to: age
+    method: generalization
+  
+  - rule_id: date_precision_reduction
+    description: "Dates should only include year"
+    applies_to: [admission_date, discharge_date, date_of_birth]
+    method: precision_reduction
+  
+  - rule_id: zipcode_truncation
+    description: "Zip codes limited to first 3 digits"
+    applies_to: zipcode
+    method: truncation
+  
+  - rule_id: geographic_generalization
+    description: "Small geographic areas aggregated to state level"
+    applies_to: [city, county]
+    method: geographic_generalization
+
+quality_metrics:
+  completeness_thresholds:
+    vital_signs: 0.95
+    demographics: 0.99
+    insurance: 0.90
+    diagnosis: 0.95
+  
+  consistency_rules:
+    - bmi_weight_height_consistency
+    - age_dob_consistency
+    - diagnosis_procedure_alignment
