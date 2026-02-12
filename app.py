@@ -165,40 +165,40 @@ def page_home():
     """)
 
     # Example datasets
-    # st.markdown('<p class="sub-header">Try Example Datasets</p>',
-    #             unsafe_allow_html=True)
+    st.markdown('<p class="sub-header">Try Example Datasets</p>',
+                unsafe_allow_html=True)
 
-    # col1, col2 = st.columns(2)
+    col1, col2 = st.columns(2)
 
-    # with col1:
-    #     if st.button("📈 Generate Sample Analytics Data", use_container_width=True):
-    #         # Create sample data
-    #         np.random.seed(42)
-    #         sample_data = pd.DataFrame({
-    #             'customer_id': range(1, 101),
-    #             'age': np.random.randint(18, 80, 100),
-    #             'income': np.random.lognormal(10.5, 0.5, 100).astype(int),
-    #             'purchase_amount': np.random.uniform(10, 1000, 100).round(2),
-    #             'category': np.random.choice(['Electronics', 'Clothing', 'Food', 'Books'], 100),
-    #         })
-    #         st.session_state.reference_data = sample_data
-    #         st.session_state.current_page = 'Upload'
-    #         st.rerun()
+    with col1:
+        if st.button("📈 Generate Sample Analytics Data", use_container_width=True):
+            # Create sample data
+            np.random.seed(42)
+            sample_data = pd.DataFrame({
+                'customer_id': range(1, 101),
+                'age': np.random.randint(18, 80, 100),
+                'income': np.random.lognormal(10.5, 0.5, 100).astype(int),
+                'purchase_amount': np.random.uniform(10, 1000, 100).round(2),
+                'category': np.random.choice(['Electronics', 'Clothing', 'Food', 'Books'], 100),
+            })
+            st.session_state.reference_data = sample_data
+            st.session_state.current_page = 'Upload'
+            st.rerun()
 
-    # with col2:
-    #     if st.button("👥 Generate Sample User Data", use_container_width=True):
-    #         # Create sample user data
-    #         np.random.seed(42)
-    #         sample_data = pd.DataFrame({
-    #             'user_id': range(1, 101),
-    #             'signup_date': pd.date_range('2023-01-01', periods=100, freq='D'),
-    #             'country': np.random.choice(['USA', 'UK', 'Canada', 'Australia'], 100),
-    #             'plan': np.random.choice(['Free', 'Basic', 'Premium'], 100),
-    #             'monthly_spend': np.random.uniform(0, 100, 100).round(2),
-    #         })
-    #         st.session_state.reference_data = sample_data
-    #         st.session_state.current_page = 'Upload'
-    #         st.rerun()
+    with col2:
+        if st.button("👥 Generate Sample User Data", use_container_width=True):
+            # Create sample user data
+            np.random.seed(42)
+            sample_data = pd.DataFrame({
+                'user_id': range(1, 101),
+                'signup_date': pd.date_range('2023-01-01', periods=100, freq='D'),
+                'country': np.random.choice(['USA', 'UK', 'Canada', 'Australia'], 100),
+                'plan': np.random.choice(['Free', 'Basic', 'Premium'], 100),
+                'monthly_spend': np.random.uniform(0, 100, 100).round(2),
+            })
+            st.session_state.reference_data = sample_data
+            st.session_state.current_page = 'Upload'
+            st.rerun()
 
 
 # Page: Upload
