@@ -296,9 +296,8 @@ class EmailGenerator:
     
     DOMAINS = [
         'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com',
-        'company.com', 'example.com', 'email.com', 'mail.com',
-        'business.org', 'enterprise.net'
-    ]
+        'icloud.com', 'aol.com', 'live.com', 'msn.com',
+         ]
     
     def __init__(self, domains: Optional[List[str]] = None):
         """
